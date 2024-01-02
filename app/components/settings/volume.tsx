@@ -1,5 +1,5 @@
 "use client"
-import { useSettingsContext } from "../lib/contexts/settingsContext";
+import { useSettingsContext } from "../../lib/contexts/settingsContext";
 
 export const Volume = () => {
   const { dispatch: settingsDispatch, state: settingsState } = useSettingsContext();
@@ -9,7 +9,8 @@ export const Volume = () => {
   };
 
   return (
-    <div>
+    <div className="border border-white rounded-lg p-3 w-fit flex justify-center">
+      <span className="mr-2">Volume: </span>
       <input
         type="range"
         min="0.0"
